@@ -48,4 +48,12 @@ public class UserController {
         User updated = userService.updateUser(id, user);
         return ResponseEntity.ok(updated);
     }
+
+    //delete allusers
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAllUsers() {
+        userService.deleteAllUsers();
+        return ResponseEntity.noContent().build();
+    }
+
 }
